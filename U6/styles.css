@@ -1,0 +1,577 @@
+﻿* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.logo {
+    background-color: #D9ead3;
+    border-bottom: solid #b2d6a5 8px;
+    z-index: 10000;
+}
+
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: #b45f06;
+    z-index: 100;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color:  #ffffff;
+  color: black;
+  transition: 0.3s;
+}
+
+/* Style the topnav links */
+.currentpage a {
+  float: right;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+    background-color:  #b2d6a5;
+
+}
+
+/* Change color on hover */
+.currentpage a:hover {
+  background-color:  black;
+  color: #f2f2f2;
+  transition: 0.3s;
+}
+
+/* Style the content */
+.content {
+  background-color:  #e69138;
+  padding: 10px;
+
+}
+
+.maincontent{
+font-family: Arial, Helvetica, sans-serif;
+background-color: #f2f2f2;
+width: 1000px;
+margin-right: auto;
+margin-left: auto;
+margin-top: 2px;
+color: #32322C;
+ padding: 10px;
+}
+.round img:hover{
+border-radius: 25%;
+transition: 0.3s;
+}
+
+.maincontent img{
+border-radius: 25px;
+}
+.roundnohover img{
+border-radius: 25px;
+}
+
+/* Style the footer */
+.footer {
+  background-color: #b45f06;
+  padding: 10px;
+  text-align: center;
+  color: #d47e24;
+}
+
+    .footer a {
+        color: #d47e24;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    /* Change color on hover */
+    .footer a:hover {
+        background-color: #ffffff;
+        color: black;
+        transition: 0.3s;
+    }
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1200px;
+  position: relative;
+  margin: auto;
+  margin-top:45px;
+
+}
+
+.slideshow-container img{
+  border-radius: 25px;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: #e69138;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.greeting{
+width: 1000px;
+margin-right: auto;
+margin-left: auto;
+  padding: 10px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+
+}
+
+.column2 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+* {
+  box-sizing: border-box;
+}
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid #e69138;
+}
+input[type=text]:focus {
+  background-color: #c99a69;
+}
+
+.formlabels {
+    box-sizing: border-box;
+    margin: -0.2em;
+    line-height: 3.7;
+    font-weight: bold;
+
+}
+  
+  input[type=submit], input[type=reset] {
+  background-color: #b45f06;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+    border: 2px;
+  border-bottom: 2px solid #e69138;
+}
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: rgba(255,255,255,0);
+    cursor: pointer;
+    padding: 15px;
+    color: white;
+}
+
+#myBtn:hover {
+  background-color: #555; 
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+float: right;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    line-height: 2;
+    position: absolute;
+    width: 120%;
+    left: -20%;
+    transform-origin: 0 0;
+    transform: scaleY(0);
+    transition: 0.3s;
+    margin-top: 47px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: white;
+  padding: 12px 89px;
+  text-decoration: none;
+  display: block;
+  border-style: solid;
+    border-color: #e69138;
+	background-color: #b45f06;
+	z-index: 101110;
+}
+
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {  transform: scaleY(1);
+z-index: 1000;
+
+}
+
+#thumbs {
+    width: 500px;
+    margin: 0 auto;
+    align-items: center;
+    position: relative;
+    justify-content: flex-start;
+    margin-top: 250px;
+    text-align: center;
+}
+
+#thumbsbutton {
+    width: 500px;
+    margin: 5px auto;
+    height: 90px;
+    line-height: 90px;
+    background-color: #444;
+    color: #fbfbfb;
+
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 90px;
+    transition: all 0.3s;
+
+    -webkit-border-radius: 20px 20px 20px 20px;
+    -moz-border-radius: 20px 20px 20px 20px;
+    -o-border-radius: 20px 20px 20px 20px;
+}
+
+    #thumbsbutton:hover {
+        opacity: 0.8;
+        font-size: 78px;
+        cursor: pointer;
+    }
+
+#youtube {
+    float: right;
+    padding-right: 12px;
+    margin-top: -765px;
+    position: sticky;
+    top: 0;
+
+}
+#youtubeButton {
+    float: right;
+    padding-right: 12px;
+    margin-top: -765px;
+    position: sticky;
+    top: 0;
+    cursor: pointer;
+    background-color: #b45f06;
+
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.mystyle {
+    visibility: hidden;
+}
+
+
+
+.animation-box {
+    width: 93%; /* Adjust as needed */
+    height: 17vh; /* Adjust as needed */
+    background: #D9ead3;
+    padding: 20px;
+    overflow: hidden;
+    z-index: -100000;
+    float: right;
+    margin-top: -150px;
+}
+
+.typing-animation {
+    width: 100%;
+    height: auto;
+    filter:opacity(75%);
+    color: #b2d6a5;
+}
+
+    .typing-animation div {
+        display: inline-block; /* Ensure tags are displayed in a line */
+        margin-right: 5px; /* Adjust spacing between tags */
+
+
+    }
+
+
+
+#workspace-container {
+    display: flex; /* Sets the display property to flex */
+    justify-content: space-around; /* Centers the flex items with space around them */
+    align-items: flex-start; /* Aligns the flex items to the start of the flex container */
+    margin: 20px auto; /* Sets the margin */
+    max-width: 1200px; /* Sets the maximum width of the container */
+}
+
+#workspace {
+    width: 800px; /* Sets the width of the workspace */
+    height: 500px; /* Sets the height of the workspace */
+    background-color: #ffffff; /* Sets the background color */
+    border: 2px solid #6c757d; /* Sets the border */
+    border-radius: 10px; /* Sets the border radius */
+    position: relative; /* Sets the position to relative */
+}
+
+#storage-area {
+    width: 200px; /* Sets the width of the storage area */
+    background-color: #ffffff; /* Sets the background color */
+    border: 2px solid #6c757d; /* Sets the border */
+    border-radius: 10px; /* Sets the border radius */
+    padding: 10px; /* Sets the padding */
+}
+
+.tech-component {
+    width: 180px; /* Adjusted width */
+    height: 80px; /* Sets the height of the tech component */
+    background-color: #b45f06; /* Sets the background color */
+    border-radius: 10px; /* Sets the border radius */
+    cursor: pointer; /* Sets the cursor to pointer */
+    user-select: none; /* Disables text selection */
+    text-align: center; /* Centers the text */
+    line-height: 80px; /* Sets the line height */
+    margin-bottom: 10px; /* Sets the bottom margin */
+    overflow: hidden; /* Ensures text stays within the box */
+    position: relative; /* Added */
+}
+
+.tech-component-text {
+    position: absolute; /* Added */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust vertically */
+    width: 100%; /* Take full width of container */
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Display ellipsis (...) for overflow text */
+    font-size: 14px; /* Adjust font size */
+    color: #ffffff; /* Text color */
+}
+
+.connection {
+    position: absolute; /* Sets the position to absolute */
+    border: 2px solid #6c757d; /* Sets the border */
+    pointer-events: none; /* Disables pointer events */
+}
+
+#button-container {
+    display: flex; /* Sets the display property to flex */
+    flex-direction: column; /* Sets the flex direction to column */
+    align-items: center; /* Centers the flex items horizontally */
+}
+
+#reset-button {
+    margin-bottom: 10px; /* Sets the bottom margin */
+    padding: 10px 20px; /* Sets the padding */
+    background-color: #b45f06; /* Sets the background color */
+    color: #ffffff; /* Sets the text color */
+    border: none; /* Removes the border */
+    border-radius: 5px; /* Sets the border radius */
+    cursor: pointer; /* Sets the cursor to pointer */
+}
+
+    #reset-button:hover {
+        background-color: #0056b3; /* Sets the background color on hover */
+    }
+
+#total-label {
+    margin-top: 10px; /* Sets the top margin */
+    color: #343a40; /* Sets the text color */
+    font-weight: bold; /* Sets the font weight to bold */
+}
+
+
+.cube-container {
+    perspective: 1000px;
+}
+
+.cube {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotate 5s linear infinite;
+}
+
+.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    line-height: 50px;
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+}
+
+.front {
+    transform: translateZ(25px);
+}
+
+.back {
+    transform: rotateY(180deg) translateZ(25px);
+}
+
+.right {
+    transform: rotateY(90deg) translateZ(25px);
+}
+
+.left {
+    transform: rotateY(-90deg) translateZ(25px);
+}
+
+.top {
+    transform: rotateX(90deg) translateZ(25px);
+}
+
+.bottom {
+    transform: rotateX(-90deg) translateZ(25px);
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+
+    to {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+
+.pulse {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+
+    animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.15);
+    }
+}

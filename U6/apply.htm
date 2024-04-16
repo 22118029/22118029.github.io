@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <title>ICT Solutions - Apply</title>
+    <link rel="icon" type="image/x-icon" href="images/ICTSolutionsLogo.ico">
+</head>
+<body>
+    <div class="logo">
+        <a href="index.htm">
+            <img src="images/ICTSolutionsLogo.png" style="width:10%">
+        </a>
+        <div id="container">
+            <div class="animation-box">
+                <div id="code" class="typing-animation"></div>
+            </div>
+        </div>
+
+        <script>
+            const tags = [
+                'html', 'head', 'title', 'div', 'span', 'p', 'a', 'img', 'ul', 'li', 'table', 'tr', 'td',
+                'form', 'input', 'button', 'textarea', 'label', 'select', 'option',
+                'header', 'footer', 'nav', 'section', 'article', 'aside', 'main', 'h1',
+                'h2', 'h3', 'h4', 'h5', 'h6', 'br', 'hr', 'strong', 'em', 'blockquote',
+                'pre', 'code', 'iframe', 'audio', 'video', 'canvas', 'script', 'style',
+                'link', 'meta', 'base', 'svg', 'path', 'circle', 'rect', 'polygon',
+                'ellipse', 'line', 'animate', 'foreignObject', 'defs', 'clipPath', 'mask',
+                'filter', 'pattern', 'use', 'symbol', 'marker', 'linearGradient', 'radialGradient',
+                'stop', 'animateMotion', 'animateTransform', 'set', 'view', 'text', 'tspan', 'html', 'head', 'title', 'div', 'span', 'p', 'a', 'img', 'ul', 'li', 'table', 'tr', 'td',
+                'form', 'input', 'button', 'textarea', 'label', 'select', 'option',
+                'header', 'footer', 'nav', 'section', 'article', 'aside', 'main', 'h1',
+                'h2', 'h3', 'h4', 'h5', 'h6', 'br', 'hr', 'strong', 'em', 'blockquote',
+                'pre', 'code', 'iframe', 'audio', 'video', 'canvas', 'script', 'style',
+                'link', 'meta', 'base', 'svg', 'path', 'circle', 'rect', 'polygon',
+                'ellipse', 'line', 'animate', 'foreignObject', 'defs'
+            ];
+
+            let codeIndex = 0;
+            const codeElement = document.getElementById('code');
+
+            function typeCode() {
+                if (codeIndex < tags.length) {
+                    const tag = tags[codeIndex++];
+                    const delay = Math.random() * 300 + 100;
+                    setTimeout(() => {
+                        codeElement.innerHTML += `<div>&lt;${tag}&gt;</div>`; // Simulate typing the opening tag
+                        typeClosingTag(tag);
+                    }, delay);
+                }
+            }
+
+            function typeClosingTag(tag) {
+                const delay = Math.random() * 300 + 100;
+                setTimeout(() => {
+                    codeElement.innerHTML += `<div>&lt;/${tag}&gt;</div>`; // Simulate typing the closing tag
+                    typeCode(); // Continue typing the next tag
+                }, delay);
+            }
+
+            typeCode(); // Start typing the code
+        </script>
+    </div>
+    <div class="topnav">
+        <a href="techlab.htm">Virtual Tech Lab</a>
+        <a href="courses.htm">Courses</a>
+        <div class="currentpage">
+            <a href="apply.htm">Apply</a>
+        </div>
+        <a href="jobspec.htm">Job Specification</a>
+
+        <div class="dropdown">
+            <a class="dropbtn" href="trainees.htm">Existing Trainees▼</a>
+
+            <div class="dropdown-content">
+                <a href="trainees.htm#Trainee3">Trainee 3</a>
+                <a href="trainees.htm#Trainee2">Trainee 2</a>
+                <a href="trainees.htm#Trainee1">Trainee 1</a>
+
+            </div>
+        </div>
+
+        <a href="index.htm">Home</a>
+
+
+
+    </div>
+
+<div class="content">
+<center>
+<h1>Apply</h1>
+</center>
+<div class = "maincontent">
+<center>
+<form action="mailto:">
+
+    <div class="row">
+        <div class="column">
+
+            <div class="formlabels">
+                Full Name:<br>
+                Email:<br>
+                Phone Number:<br>
+                D.O.B:
+            </div>
+
+        </div>
+        <div class="column">
+            <input type="text" name="fname" value="John Doe"><br>
+            <input type="text" name="email" value="JohnDoe@outlook.com"><br>
+            <input type="text" name="phnumber" value="01234567891"><br>
+            <input type="text" name="dob" value="01/01/1999"><br><br>
+            <div class="pulse">
+                <input type="submit" value="Submit">
+                </div>
+            </div>
+            <div class="column">
+                <a target=”_blank” href="https://www.shutterstock.com/image-photo/two-business-men-shaking-hands-close-124842466">
+                    <img src="images/HandShake.jpg" style="width:100%">
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</form>
+</center>
+<br>
+<button onclick="topFunction()" id="myBtn" title="Go to top">
+    <div class="cube-container">
+        <div class="cube">
+            <div class="face front"><img src="images/ICTSolutionsLogoSquare.png" style="width:100%"></div>
+            <div class="face back"><img src="images/ICTSolutionsLogoSquare.png" style="width:100%"></div>
+            <div class="face right"><img src="images/ICTSolutionsLogoSquare.png" style="width:100%"></div>
+            <div class="face left"><img src="images/ICTSolutionsLogoSquare.png" style="width:100%"></div>
+            <div class="face top"><img src="images/ICTSolutionsLogoSquare.png" style="width:100%"></div>
+            <div class="face bottom"><img src="images/ICTSolutionsLogoSquare.png" style="width:100%"></div>
+        </div>
+    </div>
+    <br>
+    <br>
+    Top
+</button>
+  <script>
+// Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+</div>
+<div class="footer">
+    <div class="row">
+        <div class="column">
+            <h2> Contact Us</h2>
+            Phone Number: 00000000000<br>
+            Email: help@ITSolutions.com
+            <br>
+            <br>
+            <a target=”_blank” href="https://www.instagram.com">
+                <img src="images/instagram.png" style="width:7%">
+            </a>
+            <a target=”_blank” href="https://www.facebook.com">
+                <img src="images/facebook.png" style="width:7%">
+            </a>
+            <a target=”_blank” href="https://www.twitter.com">
+                <img src="images/twitter.png" style="width:7%">
+            </a>
+        </div>
+        <div class="column">
+            <h2>Find More Resources</h2>
+            <a href="techlab.htm">Test Your Computer Building Skills!</a><br />
+            <a href="https://www.youtube.com/watch?v=salY_Sm6mv4&t=1s&ab_channel=AaronJack">HTML in 5 Mins Video</a><br />
+            <a href="courses.htm">Courses</a>
+        </div>
+        <div class="column">
+
+            <h2>Where to go next</h2>
+            <a href="index.htm">Home</a><br>
+            <a href="trainees.htm">Existing Trainees</a><br>
+            <a href="jobspec.htm">Job Specification</a><br>
+            <a href="apply.htm">Apply</a><br>
+            <a href="courses.htm">Courses</a>
+
+
+
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

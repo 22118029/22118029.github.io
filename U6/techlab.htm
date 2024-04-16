@@ -1,0 +1,229 @@
+<!DOCTYPE html> <!-- Specifies the document type -->
+<html lang="en"> <!-- Specifies the language of the document -->
+<head>
+    <meta charset="UTF-8"> <!-- Sets the character encoding to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Sets the viewport for responsive design -->
+    <title>Virtual Tech Lab</title> <!-- Sets the title of the document -->
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* Sets the font family for the body text */
+            background-color: #e69138; /* Sets the background color */
+            margin: 0; /* Sets the margin to 0 */
+            padding: 0; /* Sets the padding to 0 */
+        }
+
+        h1 {
+            text-align: center; /* Centers the text */
+            margin-top: 20px; /* Sets the top margin to 20px */
+            color: #343a40; /* Sets the text color */
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <a href="index.htm">
+            <img src="images/ICTSolutionsLogo.png" style="width:10%">
+        </a>
+
+        <div id="container">
+            <div class="animation-box">
+                <div id="code" class="typing-animation"></div>
+            </div>
+        </div>
+
+        <script>
+            const tags = [
+                'html', 'head', 'title', 'div', 'span', 'p', 'a', 'img', 'ul', 'li', 'table', 'tr', 'td',
+                'form', 'input', 'button', 'textarea', 'label', 'select', 'option',
+                'header', 'footer', 'nav', 'section', 'article', 'aside', 'main', 'h1',
+                'h2', 'h3', 'h4', 'h5', 'h6', 'br', 'hr', 'strong', 'em', 'blockquote',
+                'pre', 'code', 'iframe', 'audio', 'video', 'canvas', 'script', 'style',
+                'link', 'meta', 'base', 'svg', 'path', 'circle', 'rect', 'polygon',
+                'ellipse', 'line', 'animate', 'foreignObject', 'defs', 'clipPath', 'mask',
+                'filter', 'pattern', 'use', 'symbol', 'marker', 'linearGradient', 'radialGradient',
+                'stop', 'animateMotion', 'animateTransform', 'set', 'view', 'text', 'tspan', 'html', 'head', 'title', 'div', 'span', 'p', 'a', 'img', 'ul', 'li', 'table', 'tr', 'td',
+                'form', 'input', 'button', 'textarea', 'label', 'select', 'option',
+                'header', 'footer', 'nav', 'section', 'article', 'aside', 'main', 'h1',
+                'h2', 'h3', 'h4', 'h5', 'h6', 'br', 'hr', 'strong', 'em', 'blockquote',
+                'pre', 'code', 'iframe', 'audio', 'video', 'canvas', 'script', 'style',
+                'link', 'meta', 'base', 'svg', 'path', 'circle', 'rect', 'polygon',
+                'ellipse', 'line', 'animate', 'foreignObject', 'defs'
+            ];
+
+            let codeIndex = 0;
+            const codeElement = document.getElementById('code');
+
+            function typeCode() {
+                if (codeIndex < tags.length) {
+                    const tag = tags[codeIndex++];
+                    const delay = Math.random() * 300 + 100;
+                    setTimeout(() => {
+                        codeElement.innerHTML += `<div>&lt;${tag}&gt;</div>`; // Simulate typing the opening tag
+                        typeClosingTag(tag);
+                    }, delay);
+                }
+            }
+
+            function typeClosingTag(tag) {
+                const delay = Math.random() * 300 + 100;
+                setTimeout(() => {
+                    codeElement.innerHTML += `<div>&lt;/${tag}&gt;</div>`; // Simulate typing the closing tag
+                    typeCode(); // Continue typing the next tag
+                }, delay);
+            }
+
+            typeCode(); // Start typing the code
+        </script>
+    </div>
+
+    <div class="topnav">
+        <div class="currentpage">
+            <a href="techlab.htm">Virtual Tech Lab</a>
+        </div>
+            <a href="courses.htm">Courses</a>
+            <a href="apply.htm">Apply</a>
+            <a href="jobspec.htm">Job Specification</a>
+            <div class="dropdown">
+                <a class="dropbtn" href="trainees.htm">Existing Trainees▼</a>
+
+                <div class="dropdown-content">
+                    <a href="trainees.htm#Trainee3">Trainee 3</a>
+                    <a href="trainees.htm#Trainee2">Trainee 2</a>
+                    <a href="trainees.htm#Trainee1">Trainee 1</a>
+
+                </div>
+            </div>
+
+            <a href="index.htm">Home</a>
+
+    </div>
+
+    <h1>Virtual Tech Lab</h1> <!-- Heading for the virtual tech lab -->
+    <div id="workspace-container">
+        <div id="workspace" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <!-- Workspace Area -->
+        </div>
+        <div id="button-container">
+            <button id="reset-button" onclick="resetWorkspace()">Reset Workspace</button> <!-- Button to reset the workspace -->
+            <div id="total-label">Total: £0</div> <!-- Total price label -->
+        </div>
+        <div id="storage-area">
+            <h2 style="text-align: center; color: #343a40;">Component Storage</h2> <!-- Heading for component storage -->
+            <div id="component-storage">
+                <div id="cpu1" class="tech-component" data-type="cpu" data-price="300" draggable="true" ondragstart="drag(event)">
+                    <div class="tech-component-text">Intel Core i7-11700K (£300)</div> <!-- CPU component -->
+                </div>
+                <div id="cpu2" class="tech-component" data-type="cpu" data-price="250" draggable="true" ondragstart="drag(event)">
+                    <div class="tech-component-text">AMD Ryzen 7 5700G (£250)</div> <!-- CPU component -->
+                </div>
+                <div id="gpu1" class="tech-component" data-type="gpu" data-price="200" draggable="true" ondragstart="drag(event)">
+                    <div class="tech-component-text">GeForce GTX 1650 (£200)</div> <!-- GPU component -->
+                </div>
+                <div id="gpu2" class="tech-component" data-type="gpu" data-price="180" draggable="true" ondragstart="drag(event)">
+                    <div class="tech-component-text">AMD Radeon 3200 (£180)</div> <!-- GPU component -->
+                </div>
+                <div id="ram1" class="tech-component" data-type="ram" data-price="100" draggable="true" ondragstart="drag(event)">
+                    <div class="tech-component-text">16GB DDR4 (£100)</div> <!-- RAM component -->
+                </div>
+                <div id="ram2" class="tech-component" data-type="ram" data-price="150" draggable="true" ondragstart="drag(event)">
+                    <div class="tech-component-text">32GB DDR3 (£150)</div> <!-- RAM component -->
+                </div>
+                <div id="storage1" class="tech-component" data-type="storage" data-price="80" draggable="true" ondragstart="drag(event)">
+                    <div class="tech-component-text">500GB M.2 SSD (£80)</div> <!-- Storage component -->
+                </div>
+                <div id="storage2" class="tech-component" data-type="storage" data-price="120" draggable="true" ondragstart="drag(event)">
+                    <div class="tech-component-text">1TB SATA SSD (£120)</div> <!-- Storage component -->
+                </div>
+                <div id="power1" class="tech-component" data-type="power" data-price="50" draggable="true" ondragstart="drag(event)">
+                    <div class="tech-component-text">500W Power Supply (£50)</div> <!-- Power supply component -->
+                </div>
+                <div id="power2" class="tech-component" data-type="power" data-price="70" draggable="true" ondragstart="drag(event)">
+                    <div class="tech-component-text">750W Power Supply (£70)</div> <!-- Power supply component -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    // JavaScript code starts here
+        var selectedComponent = null; // Variable to store selected component
+        var offsetX, offsetY; // Variables to store offset from mouse pointer to component
+        var totalPrice = 0; // Variable to store total price
+        var componentPrices = {}; // Object to store component prices
+
+        function allowDrop(event) { // Function to allow dropping component
+            event.preventDefault(); // Prevents default behavior
+        }
+
+        function drag(event) { // Function to handle dragging component
+            selectedComponent = event.target.id; // Stores ID of dragged component
+            offsetX = event.clientX - event.target.getBoundingClientRect().left; // Calculates X offset
+            offsetY = event.clientY - event.target.getBoundingClientRect().top; // Calculates Y offset
+        }
+
+        function drop(event) { // Function to handle dropping component
+            event.preventDefault(); // Prevents default behavior
+            if (selectedComponent) { // Checks if component is selected
+                var component = document.getElementById(selectedComponent); // Gets selected component
+                var workspace = document.getElementById("workspace"); // Gets workspace element
+                if (event.target === workspace) { // Checks if dropped on workspace
+                    var x = event.clientX - offsetX - workspace.getBoundingClientRect().left; // Calculates X position
+                    var y = event.clientY - offsetY - workspace.getBoundingClientRect().top; // Calculates Y position
+                    component.style.position = "absolute"; // Set position to absolute for precise placement
+                    component.style.left = x + "px"; // Sets left position
+                    component.style.top = y + "px"; // Sets top position
+                    workspace.appendChild(component); // Append the component to the workspace
+                    if (!(selectedComponent in componentPrices)) { // Checks if component price is not already added
+                        var price = parseInt(component.getAttribute("data-price")); // Gets price of component
+                        componentPrices[selectedComponent] = price; // Adds component price to total price
+                    }
+                    totalPrice = calculateTotalPrice(); // Calculates total price
+                    updateTotalPrice(); // Updates total price display
+                } else { // If dropped outside workspace
+                    var storage = document.getElementById("component-storage"); // Gets storage area
+                    storage.appendChild(component.cloneNode(true)); // Return component to storage
+                    component.classList.remove("invalid-placement"); // Removes invalid placement class
+                }
+                selectedComponent = null; // Resets selected component
+            }
+        }
+
+        function calculateTotalPrice() { // Function to calculate total price
+            var total = 0; // Initializes total price
+            for (var componentId in componentPrices) { // Iterates through component prices
+                total += componentPrices[componentId]; // Adds each component price to total
+            }
+            return total; // Returns total price
+        }
+
+        function updateTotalPrice() { // Function to update total price display
+            var totalLabel = document.getElementById("total-label"); // Gets total label element
+            totalLabel.textContent = "Total: £" + totalPrice; // Updates total price text
+        }
+
+        function resetWorkspace() { // Function to reset workspace
+            window.location.reload(); // Reloads the page
+        }
+
+        function removeFromWorkspace(event) { // Function to remove component from workspace
+            event.preventDefault(); // Prevents default behavior
+            var data = event.dataTransfer.getData("text"); // Gets data of dragged component
+            var component = document.getElementById(data); // Gets dragged component
+            if (component) { // Checks if component exists
+                var price = componentPrices[data]; // Gets price of component
+                delete componentPrices[data]; // Deletes component price from total
+                totalPrice -= price; // Subtracts component price from total price
+                updateTotalPrice(); // Updates total price display
+                component.parentNode.removeChild(component); // Remove component from workspace
+            }
+        }
+
+        document.addEventListener("mouseup", function (event) { // Listens for mouseup event
+            if (selectedComponent) { // Checks if component is selected
+                drop(event); // Handles dropping component
+            }
+        });
+    </script>
+</body>
+</html>
