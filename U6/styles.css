@@ -391,8 +391,8 @@ z-index: 1000;
 
 
 .animation-box {
-    width: 93%; /* Adjust as needed */
-    height: 14vh; /* Adjust as needed */
+    width: 93%; 
+    height: 14vh;
     background: #D9ead3;
     padding: 20px;
     overflow: hidden;
