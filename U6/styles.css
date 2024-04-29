@@ -240,10 +240,12 @@ border-radius: 25px;
 }
 
 .greeting{
-width: 1000px;
+max-width: 1000px;
 margin-right: auto;
 margin-left: auto;
   padding: 10px;
+text-align: center;
+  
 }
 
 /* Create three equal columns that floats next to each other */
